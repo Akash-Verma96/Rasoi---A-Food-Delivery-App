@@ -5,9 +5,9 @@ import Home from './Home/Home'
 
 function Layout() {
   return (
-    <div className='px-20 w-full h-screen' >
-     <Home/>
+    <div className='px-10 w-full h-screen' >
      <Outlet/>
+     
      <FeatureBar/>
     </div>
   )

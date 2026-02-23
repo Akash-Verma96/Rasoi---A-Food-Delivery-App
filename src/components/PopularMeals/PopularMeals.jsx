@@ -57,14 +57,14 @@ const popularMeals = [
 
 function PopularMeals() {
   return (
-    <section className="w-full px-4 py-6">
+    <section className="w-full px-4">
       
       <h2 className="text-lg sm:text-xl font-semibold text-orange-400 mb-4">
         Popular Meals 🔥
       </h2>
 
       {/* Scroll Container */}
-      <div className="flex gap-4 overflow-x-auto hide-scrollbar scroll-smooth py-4">
+      <div className="flex gap-4 overflow-x-auto hide-scrollbar scroll-smooth p-4">
         {popularMeals.map((meal) => (
           <div
             key={meal.id}

@@ -4,14 +4,14 @@ import { Bell, Search } from "lucide-react";
 
 function Header() {
   return (
-    <header className="w-full px-4 py-3 flex items-center justify-between gap-4">
+    <header className="w-full px-4 flex items-center justify-between gap-4">
 
       {/* Logo */}
       <div className="flex items-center">
         <img
           src={rasoiLogo}
           alt="Rasoi Logo"
-          className="w-14 sm:w-16 md:w-20 object-contain mix-blend-lighten"
+          className="w-14 sm:w-16 md:w-30 object-contain mix-blend-lighten"
         />
       </div>
 
