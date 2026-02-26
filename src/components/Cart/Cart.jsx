@@ -24,17 +24,14 @@ const Meals = [
 
 function Cart() {
   return (
-    <div className='w-full h-screen flex flex-col gap-2' >
+    <div className='w-full h-screen flex  gap-2' >
       
-      {Meals.map((meal)=>{
-        <div className='w-60 h-60 border border-orange-400 flex gap-3' >
-          <img className='rounded-full object-contain' src={meal.image} alt="" />
-          <div className='flex gap-2' >
-            <h3 className='rounded px-2 py-1 bg-gray-600/40' >{meal.name}</h3>
-            <h3 className='rounded px-2 py-1 bg-gray-600/40' >{meal.price}</h3>
-          </div>
+      {Meals.map((meal)=>(
+        <div className='w-40 h-30' >
+          <img src={meal.image} alt="" />
+          <h3>Hello</h3>
         </div>
-      })}
+      ))}
     </div>
   )
 }
