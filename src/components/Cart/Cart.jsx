@@ -29,7 +29,7 @@ function Cart() {
       {Meals.map((meal)=>(
         <div className='w-40 h-30' >
           <img src={meal.image} alt="" />
-          <h3>Hello</h3>
+          <h3>Test</h3>
         </div>
       ))}
     </div>
