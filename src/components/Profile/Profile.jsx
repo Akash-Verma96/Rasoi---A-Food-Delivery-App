@@ -8,7 +8,7 @@ const Profile = () => {
         {/* Profile Header */}
         <div className="flex flex-col items-center">
           <img
-            src="https://images.unsplash.com/photo-1502767089025-6572583495b0"
+            src="https://i.pinimg.com/736x/99/5c/46/995c46fb3db7da44434d14ba5264e00c.jpg"
             alt="User"
             className="w-24 h-24 rounded-full object-cover border-4 border-orange-500"
           />

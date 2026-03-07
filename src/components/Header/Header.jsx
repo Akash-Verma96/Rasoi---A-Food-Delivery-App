@@ -5,7 +5,6 @@ import { Bell, Search } from "lucide-react";
 function Header() {
   return (
     <header className="w-full px-4 flex items-center justify-between gap-4">
-
       {/* Logo */}
       <div className="flex items-center">
         <img
@@ -34,7 +33,18 @@ function Header() {
       </div>
 
       {/* Notification */}
-      <div className="relative">
+      <div className="relative flex gap-3 justify-center items-center cursor-pointer">
+        <button
+          className="group relative inline-flex items-center justify-center px-5 py-2.5 font-semibold text-white rounded-2xl
+      bg-linear-to-r from-orange-500 via-orange-600 to-red-500
+      shadow-lg shadow-orange-500/30
+      hover:shadow-orange-600/40 hover:scale-105
+      active:scale-95
+      transition-all duration-300 ease-in-out"
+        >
+          <span className="absolute inset-0 rounded-2xl bg-white opacity-0 group-hover:opacity-10 transition duration-300"></span>
+          <span className="relative">Logout</span>
+        </button>
         <Bell
           size={24}
           className="text-orange-400 

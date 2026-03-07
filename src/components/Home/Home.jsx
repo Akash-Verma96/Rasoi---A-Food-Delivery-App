@@ -3,6 +3,7 @@ import Header from '../Header/Header'
 import PopularMeals from '../PopularMeals/PopularMeals'
 import Category from '../Category/Category'
 import Meals from '../Meals/Meals'
+import Footer from '../Footer/Footer'
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       <PopularMeals/>
       <Category/>
       <Meals/>
+      <Footer/>
     </div>
   )
 }
