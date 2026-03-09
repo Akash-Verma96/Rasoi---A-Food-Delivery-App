@@ -14,18 +14,18 @@ function Layout() {
 
   const fecthUser = async () => {
     if(userData) return;
+
     try {
-      const user = await axios.get(
+      const res = await axios.get(
         BASE_URL + "/profile/view",
-        {},
         {
           withCredentials: true,
         },
       );
 
-      dispatch(addUser(user));
+      dispatch(addUser(res.data));
     } catch (error) {
-      if(error.response?.status == 401){
+      if(error.response?.status === 401){
         return navigate("/login");
       }
       console.log("ERROR : ", error.response);
