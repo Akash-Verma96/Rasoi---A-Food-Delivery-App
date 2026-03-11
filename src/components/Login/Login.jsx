@@ -14,17 +14,30 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleLogin = async () => {
+    
     try {
       setError("");
+
+      // res
       const res = await axios.post(BASE_URL + "/login",{
         emailId,
         password
       },{withCredentials:true})
 
+      console.log(res); 
+
+
+      if(res.status== 401) {
+        throw new Error("invalid credentials")
+      }
+
+      
       alert("Login succesfull !")
       return navigate("/")
     } catch (err) {
-      setError(err?.response?.data);
+      
+      alert("Invalid Credentials"); 
+      setError(err);
     }
   };
 

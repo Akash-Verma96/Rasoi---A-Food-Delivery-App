@@ -7,55 +7,8 @@ const meals = [
     price: 249,
     image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c",
   },
-  {
-    id: 2,
-    name: "Cheese Burger",
-    price: 179,
-    image: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
-  },
-  {
-    id: 3,
-    name: "Margherita Pizza",
-    price: 299,
-    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38",
-  },
-  {
-    id: 4,
-    name: "Chicken Biryani",
-    price: 269,
-    image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092",
-  },
-  {
-    id: 5,
-    name: "Breakfast Platter",
-    price: 199,
-    image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836",
-  },
-  {
-    id: 6,
-    name: "Healthy Veg Bowl",
-    price: 189,
-    image: "https://images.unsplash.com/photo-1498837167922-ddd27525d352",
-  },
-  {
-    id: 7,
-    name: "Classic Pancakes",
-    price: 149,
-    image: "https://images.unsplash.com/photo-1525351484163-7529414344d8",
-  },
-  {
-    id: 8,
-    name: "Sushi Combo",
-    price: 349,
-    image: "https://images.unsplash.com/photo-1512058564366-18510be2db19",
-  },
-  {
-    id: 9,
-    name: "Grilled Steak",
-    price: 499,
-    image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288",
-  }
 ];
+
 
 function Cart() {
   return (

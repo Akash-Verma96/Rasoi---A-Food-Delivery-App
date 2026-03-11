@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const meals = [
   {
@@ -124,6 +125,7 @@ const meals = [
 ];
 
 function Meals() {
+  
   return (
     <div className="px-4 py-8 max-w-7xl mx-auto">
       <h2 className="text-lg sm:text-xl font-semibold text-orange-400 mb-4">
@@ -167,9 +169,10 @@ function Meals() {
                   </span>
                 </span>
 
-                <button className="bg-orange-500 hover:bg-orange-600 text-white text-sm px-3 py-1 rounded-lg transition duration-300">
+               
+                <Link  className="bg-orange-500 hover:bg-orange-600 text-white text-sm px-3 py-1 rounded-lg transition duration-300">
                   Order Now
-                </button>
+                </Link>
               </div>
             </div>
           </div>

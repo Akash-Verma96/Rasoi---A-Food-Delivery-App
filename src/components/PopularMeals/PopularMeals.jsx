@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const popularMeals = [
   {
@@ -98,7 +99,8 @@ function PopularMeals() {
                 </p>
               </div>
 
-              <button
+              <Link
+              
                 className="mt-3 sm:mt-2 w-full sm:w-auto px-4 py-2 rounded-xl 
                 bg-orange-500 text-white font-medium
                 hover:bg-orange-600
@@ -106,7 +108,7 @@ function PopularMeals() {
                 transition"
               >
                 Order Now
-              </button>
+              </Link>
 
             </div>
           </div>

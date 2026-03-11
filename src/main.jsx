@@ -11,6 +11,7 @@ import Category from "./components/Category/Category.jsx";
 import Login from "./components/Login/Login.jsx";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore.js";
+import MealDetail from "./components/Meal Detail/MealDetail.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -23,6 +24,7 @@ createRoot(document.getElementById("root")).render(
             <Route path="cart" element={<Cart />} />
             <Route path="category" element={<Category />} />
             <Route path="profile" element={<Profile />} />
+            {/* <Route path="mealDetail" element={<MealDetail />} /> */}
           </Route>
         </Routes>
       </BrowserRouter>
