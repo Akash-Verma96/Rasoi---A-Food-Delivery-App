@@ -170,7 +170,7 @@ function Meals() {
                 </span>
 
                
-                <Link  className="bg-orange-500 hover:bg-orange-600 text-white text-sm px-3 py-1 rounded-lg transition duration-300">
+                <Link to={'/mealDetail'} className="bg-orange-500 hover:bg-orange-600 text-white text-sm px-3 py-1 rounded-lg transition duration-300">
                   Order Now
                 </Link>
               </div>

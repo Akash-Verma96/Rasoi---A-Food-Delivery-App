@@ -26,7 +26,7 @@ function Layout() {
       dispatch(addUser(res.data));
     } catch (error) {
       if(error.response?.status === 401){
-        return navigate("/login");
+        return navigate("/Onboarding");
       }
       console.log("ERROR : ", error.response);
     }

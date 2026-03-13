@@ -3,6 +3,8 @@ import { Flame } from "lucide-react";
 import axios from 'axios'
 import { BASE_URL } from "../../utils/constant";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addUser } from "../../utils/userSlice";
 
 const Login = () => {
   const [emailId, setEmailId] = useState("");
@@ -13,31 +15,22 @@ const Login = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
+  const dispatch = useDispatch();
+
   const handleLogin = async () => {
     
     try {
-      setError("");
-
-      // res
       const res = await axios.post(BASE_URL + "/login",{
         emailId,
         password
       },{withCredentials:true})
 
-      console.log(res); 
-
-
-      if(res.status== 401) {
-        throw new Error("invalid credentials")
-      }
-
-      
+      dispatch(addUser(res.data));
       alert("Login succesfull !")
       return navigate("/")
     } catch (err) {
-      
-      alert("Invalid Credentials"); 
-      setError(err);
+    
+      setError(err?.response?.data);
     }
   };
 
