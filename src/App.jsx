@@ -10,13 +10,11 @@ import appStore from "./utils/appStore.js";
 import MealDetail from "./components/Meal Detail/MealDetail.jsx";
 import Onboarding from "./components/Onboarding/Onboarding.jsx";
 import Onboarding2 from "./components/Onboarding/Onboarding2.jsx";
-
-
+import Dashboard from "./pages/restaurant/Dashboard.jsx";
+import AddMeal from "./pages/restaurant/AddMeal.jsx";
 
 
 function App() {
-
-
   return (
     <>
       <Provider store={appStore}>
@@ -24,13 +22,16 @@ function App() {
         <Routes>
           <Route path="Onboarding" element={<Onboarding />} />
           <Route path="Onboarding2" element={<Onboarding2 />} />
-          <Route path="login" element={<Login />} />
+          <Route path="/login" element={<Login />} />
+          
           <Route path="/" element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="cart" element={<Cart />} />
             <Route path="category" element={<Category />} />
             <Route path="profile" element={<Profile />} />
             <Route path="mealDetail" element={<MealDetail />} />
+            <Route path="restaurant/Dashboard" element={<Dashboard />} />
+            <Route path="restaurant/addMeal" element={<AddMeal />} />
           </Route>
         </Routes>
       </BrowserRouter>

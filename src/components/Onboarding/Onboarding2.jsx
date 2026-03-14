@@ -1,16 +1,19 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 
 const Onboarding2 = () => {
   const navigate = useNavigate();
+
+  
 
   return (
     <div className="min-h-screen flex items-center justify-center  px-6">
       <div className="grid md:grid-cols-2 gap-8 max-w-5xl w-full">
 
         {/* Customer Card */}
-        <div
-          onClick={() => navigate("/customer/login")}
+        <Link
+          to={"/login"}
           className="cursor-pointer bg-orange-400 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition duration-300"
         >
           <img
@@ -29,11 +32,11 @@ const Onboarding2 = () => {
               easily.
             </p>
           </div>
-        </div>
+        </Link>
 
         {/* Restaurant Card */}
         <div
-          onClick={() => navigate("/restaurant/login")}
+          onClick={() => navigate("/restaurant/Dashboard")}
           className="cursor-pointer bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition duration-300"
         >
           <img

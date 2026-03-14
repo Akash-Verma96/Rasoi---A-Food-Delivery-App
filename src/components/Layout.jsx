@@ -37,7 +37,7 @@ function Layout() {
   },[])
 
   return (
-    <div className="px-10 w-full h-screen">
+    <div className="px-10 w-full ">
       <Outlet />
 
       <FeatureBar />

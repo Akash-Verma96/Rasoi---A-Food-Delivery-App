@@ -4,6 +4,7 @@ import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from "lucide-react"
 export default function RasoiFooter() {
   return (
     <footer className=" text-gray-300 pt-12 pb-6 px-6">
+      <div className="border-t border-gray-700 pt-10"></div>
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Brand Section */}
         <div>

@@ -1,25 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import rasoiLogo from "../../assets/Rasoi Logo.png";
-import { Bell, Search } from "lucide-react";
+import { Bell, Search, Menu, X } from "lucide-react";
 import axios from "axios";
 import { BASE_URL } from "../../utils/constant";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 
 function Header() {
+  const [open, setOpen] = useState(false);
+
   const navigate = useNavigate();
   const handleLogout = async () => {
     try {
-      await axios.post(BASE_URL + "/logout",{},{
-        withCredentials:true
-      });
+      await axios.post(
+        BASE_URL + "/logout",
+        {},
+        {
+          withCredentials: true,
+        },
+      );
 
       alert("Logout Succesfull !");
 
-      return navigate('login');
+      return navigate("login");
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  } 
+  };
 
   return (
     <header className="w-full px-4 flex items-center justify-between gap-4">
@@ -59,7 +66,7 @@ function Header() {
       hover:shadow-orange-600/40 hover:scale-105
       active:scale-95
       transition-all duration-300 ease-in-out"
-      onClick={handleLogout}
+          onClick={handleLogout}
         >
           <span className="absolute inset-0 rounded-2xl bg-white opacity-0 group-hover:opacity-10 transition duration-300"></span>
           <span className="relative">Logout</span>
@@ -70,6 +77,38 @@ function Header() {
           drop-shadow-[0_0_8px_rgba(255,140,0,0.8)] 
           cursor-pointer hover:scale-110 transition"
         />
+        <div className=" z-3">
+          {/* Hamburger Icon */}
+          <button
+            onClick={() => setOpen(!open)}
+            className="p-2 rounded-lg bg-orange-400 text-white shadow-md hover:bg-orange-500 transition"
+          >
+            {open ? <X size={24} /> : <Menu size={24} />}
+          </button>
+
+          {/* Dropdown Menu */}
+          {open && (
+            <div className="absolute right-0 mt-3 w-48 backdrop-blur-lg rounded-xl shadow-lg border overflow-hidden">
+              <ul className="flex flex-col text-orange-300">
+                <Link to={'/restaurant/Dashboard'} className="px-4 py-3 hover:bg-orange-50 cursor-pointer transition">
+                  Change Your Role
+                </Link>
+
+                <li className="px-4 py-3 hover:bg-orange-50 cursor-pointer transition">
+                  Cart
+                </li>
+
+                <li className="px-4 py-3 hover:bg-orange-50 cursor-pointer transition">
+                  Orders
+                </li>
+
+                <li className="px-4 py-3 hover:bg-orange-50 cursor-pointer transition">
+                  Profile
+                </li>
+              </ul>
+            </div>
+          )}
+        </div>
       </div>
     </header>
   );
